@@ -1,0 +1,24 @@
+@font-face {
+    font-family: Rejouice-light;
+    src: url("assets/SuisseIntl-Light.woff2");
+}
+
+@font-face {
+    font-family: Rejouice-regular;
+    src: url("assets/SuisseIntl-Regular.woff2");
+}
+
+@font-face {
+    font-family: Rejouice-medium;
+    src: url("assets/SuisseIntl-Medium.ttf");
+}
+
+@font-face {
+    font-family: Rejouice-mono;
+    src: url("assets/SuisseIntl-Mono.ttf");
+}
+
+@font-face {
+    font-family: Rejouice-book;
+    src: url("assets/SuisseIntl-Book.ttf");
+}
