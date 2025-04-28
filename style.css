@@ -65,7 +65,9 @@ main{
     align-items: center;
     position: absolute;
     z-index: 9;
-    transition: all 0.1s linear;
+    transition: all 0.2s linear;
+    pointer-events: none;
+    opacity: 0;
 }
 
 #page2{
