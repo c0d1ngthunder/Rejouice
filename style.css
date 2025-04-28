@@ -9,10 +9,14 @@ html , body {
     width: 100%;
     height: 100%;
 }
+main{
+    overflow-x: hidden;
+}
+
 #page1{
     height: 100vh;
     width: 100%;
-    position: relative;
+    /* position: relative; */
     background-color: #dadada;
 }
 .page1-content{
@@ -51,8 +55,8 @@ html , body {
     width: 92vw;
 }
 #cursor{
-    width: 6vw;
-    height: 6vw;
+    width: 7vw;
+    height: 7vw;
     border-radius: 50%;
     background-color: #FF5F38;
     color: white;
@@ -60,6 +64,8 @@ html , body {
     justify-content: center;
     align-items: center;
     position: absolute;
+    z-index: 9;
+    transition: all 0.1s linear;
 }
 
 #page2{
