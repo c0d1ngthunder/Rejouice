@@ -12,9 +12,9 @@ body {
     height: 100%;
 }
 
-main {
+/* main {
     overflow-x: hidden;
-}
+} */
 
 #page1 {
     height: 100vh;
@@ -35,7 +35,7 @@ main {
 #page1 video {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
 }
 
@@ -115,6 +115,6 @@ main {
     overflow: hidden;
 }
 
-.word{
+.word {
     display: inline-block;
 }
