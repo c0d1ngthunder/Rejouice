@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>REJOUICE® | The Growth Accelerator</title>
-    <link
-      rel="shortcut icon"
-      href="./assets/favicon-96x96.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -17,18 +13,24 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <nav>
+        <h3>The Growth Accelerator</h3>
+        <h3>Menu</h3>
+      </nav>
+    </header>
     <main>
       <div id="page1">
         <video src="./assets/reel-short.mp4" autoplay muted loop></video>
         <div class="page1-content">
           <div id="cursor"><i class="ri-play-fill"></i>Play Reel</div>
-          <nav>
-            <h3>The Growth Accelerator</h3>
-            <h3>Menu</h3>
-          </nav>
           <h1 class="text">
             <svg
               id="Calque_1"
@@ -160,6 +162,71 @@
           </div>
         </div>
       </div>
+      <div id="page3">
+        <div id="page3-head">
+          <div class="head">
+            Agency & Venture <span>Models</span
+            ><i class="ri-corner-right-down-line"></i>
+          </div>
+          <div id="page3-subhead">
+            <div>Explore Our Services</div>
+            <div>& engagement models</div>
+          </div>
+        </div>
+        <div id="page3-content">
+          <div class="vidcontainer">
+            <div class="media-wrapper">
+              <img src="./assets/hoverimg1.png" alt="" />
+              <video src="./assets/hovervideo1.mp4" muted loop autoplay></video>
+            </div>
+          </div>
+          <div class="vidcontainer">
+            <img src="./assets/hoverimg2.png" alt="" />
+            <video src="./assets/hovervideo2.mp4" muted loop autoplay></video>
+          </div>
+          <div class="vidcontainer">
+            <img src="./assets/hoverimg3.png" alt="" />
+            <video src="./assets/hovervideo3.mp4" muted loop autoplay></video>
+          </div>
+        </div>
+      </div>
+      <div id="page4">
+        <div id="page4-head">
+          <div class="left">
+            <div class="head">We operate on a simple philosophy:</div>
+            <div class="head">Quality over quantity.</div>
+          </div>
+        </div>
+        <div id="page4-content">
+          <div class="space"></div>
+          <div class="page4-text">
+            We partner with 5 clients each year. This allows for intense focus
+            on the transformation and launch of your brand by our very best
+            team, which is the only team we have.
+          </div>
+        </div>
+      </div>
+      <div id="page5"></div>
+      <div id="page6">
+        <div id="page6-top">Get in touch.</div>
+        <div id="swiperdiv">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div>
+                  <div>$5M+ in new bussiness</div>
+                </div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="swiper-slide">Slide 2</div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
@@ -170,6 +237,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script type="module" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

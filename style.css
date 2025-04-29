@@ -21,7 +21,6 @@ body {
     width: 100%;
     /* position: relative; */
     background-color: #dadada;
-    overflow: hidden;
 }
 
 .page1-content {
@@ -39,7 +38,8 @@ body {
     object-fit: cover;
 }
 
-#page1 nav {
+nav {
+    position: fixed;
     width: 100%;
     max-height: 70px;
     font-size: 0.9vw;
@@ -48,6 +48,8 @@ body {
     padding: 2.2vw;
     font-weight: 100;
     font-family: Rejouice-light;
+    z-index: 99;
+    /* color: #000; */
 }
 
 .text {
@@ -78,14 +80,16 @@ body {
     opacity: 0;
 }
 
-#page2 {
+#page2,
+#page4 {
     width: 100%;
     height: 100vh;
     padding: 3vw;
     overflow: hidden;
 }
 
-#page2-head {
+#page2-head,
+#page4-head {
     width: 100%;
     padding: 1vw 0;
     font-size: 2vw;
@@ -95,7 +99,8 @@ body {
     overflow: hidden;
 }
 
-#page2-content {
+#page2-content,
+#page4-content {
     border-top: 1px solid #000;
     padding: 1vw 0;
     font: 4.2vw Rejouice-regular;
@@ -111,10 +116,135 @@ body {
     display: inline-block;
     line-height: 4vw;
     /* width: 12vw; */
-    margin: 0 0.3vw;
+    margin: 0 0.5vw;
     overflow: hidden;
 }
 
 .word {
     display: inline-block;
+}
+
+#page3 {
+    width: 100%;
+    min-height: 100vh;
+    padding: 3vw;
+    text-align: center;
+}
+
+#page3-head {
+    width: 100%;
+    padding: 1vw 0;
+    font-family: Rejouice-light;
+}
+
+#page3-head .head {
+    font-size: 1.3vw;
+}
+
+.head span {
+    font-size: 1.1vw;
+    color: #fff;
+    background-color: black;
+    border-radius: 1.5vw;
+    padding: 6px;
+}
+
+.head i {
+    font-size: 1.6vw;
+}
+
+#page3-subhead {
+    font-family: Rejouice-light;
+    margin: 1vw;
+    font-size: 4.2vw;
+    font-weight: 700;
+}
+
+#page3-content {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0vw;
+    margin-top: 8vw;
+}
+
+.vidcontainer {
+    width: 32%;
+    height: 100%;
+    position: relative;
+}
+
+.vidcontainer video {
+    width: 100%;
+    height: 100%;
+    /* height: auto; */
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.vidcontainer img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    z-index: 999;
+}
+
+
+/* ------------------------------page 5 -------------- */
+
+#page5 {
+    width: 100%;
+    height: 100vh;
+}
+
+#page6 {
+    width: 100%;
+    height: 100vh;
+}
+
+#page6-top {
+    width: 95%;
+    margin: auto;
+    font-size: 10vw;
+    margin-top: 8vw;
+    font-family: Rejouice-light;
+    font-weight: 400;
+    border-bottom: 1px solid black;
+}
+
+#swiperdiv{
+    width: 100%;
+    height: 60vh;
+    margin-bottom: 5vw;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #bb8484;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
 }

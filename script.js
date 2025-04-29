@@ -66,8 +66,12 @@ function customCursor() {
   });
 }
 
-function page2textanimation() {
-  const text = document.querySelector(".page2-text");
+function textanimation(elem,content,head) {
+  let y = 100
+  if (head=="#page4-head"){
+    y=160
+  }
+  const text = document.querySelector(elem);
   const textArray = text.textContent.split(" ");
   text.innerHTML = ""; // Clear the text content
   textArray.forEach((word, index) => {
@@ -85,11 +89,11 @@ function page2textanimation() {
     }
   });
 
-  gsap.from(".head", {
-    y: 100,
+  gsap.from(`${head} .head`, {
+    y: y,
     duration: 0.5,
     scrollTrigger: {
-      trigger: "#page2-head",
+      trigger: head,
       start: "top 80%",
       end: "bottom 20%",
       scroller: "main",
@@ -97,11 +101,11 @@ function page2textanimation() {
     stagger: 0.01,
   });
 
-  gsap.from(".word", {
+  gsap.from(`${elem} .word`, {
     y: 120,
     duration: 0.5,
     scrollTrigger: {
-      trigger: "#page2-content",
+      trigger: content,
       start: "top 50%",
       end: "bottom 20%",
       scroller: "main",
@@ -110,5 +114,20 @@ function page2textanimation() {
   });
 }
 
-page2textanimation();
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+textanimation(".page2-text","#page2-content","#page2-head");
+textanimation(".page4-text","#page4-content","#page4-head")
 customCursor();
