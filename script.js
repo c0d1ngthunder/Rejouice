@@ -129,10 +129,13 @@ function slider() {
     slidesPerView: 4,
     spaceBetween: 30,
     loop: true,
+    freemode: true,
     autoplay: {
-      delay: 2500,
+      delay: 0,
       disableOnInteraction: false,
     },
+    speed:4000,
+    effect: "slide"
   });
 }
 
