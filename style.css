@@ -48,7 +48,7 @@ nav {
     padding: 2.2vw;
     font-weight: 100;
     font-family: Rejouice-light;
-    z-index: 99;
+    z-index: 9;
     /* color: #000; */
 }
 
@@ -158,6 +158,8 @@ nav {
     margin: 1vw;
     font-size: 4.2vw;
     font-weight: 700;
+    display: inline-block;
+    position: relative;
 }
 
 #page3-content {
@@ -176,22 +178,35 @@ nav {
     position: relative;
 }
 
+.media-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
 .vidcontainer video {
     width: 100%;
     height: 100%;
     /* height: auto; */
+    position: absolute;
     display: block;
     object-fit: cover;
     object-position: center;
 }
 
 .vidcontainer img {
+    display: block;
     width: 100%;
     height: 100%;
     position: absolute;
     object-fit: cover;
     object-position: center;
-    z-index: 999;
+    z-index: 9;
+    transition: all linear 0.3s;
+    &:hover{
+        opacity: 0;
+    }
 }
 
 
@@ -217,7 +232,7 @@ nav {
     border-bottom: 1px solid black;
 }
 
-#swiperdiv{
+#swiperdiv {
     width: 100%;
     height: 60vh;
     margin-bottom: 5vw;
@@ -247,4 +262,20 @@ nav {
 .swiper {
     margin-left: auto;
     margin-right: auto;
+}
+
+/* ----------------------loading----------------------------- */
+#loading {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: fixed;
+    z-index: 99;
+    color: #fff;
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    font-family: Rejouice-light;
 }
