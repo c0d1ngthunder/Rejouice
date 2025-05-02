@@ -232,12 +232,27 @@ function textHover(textelem, subtext) {
   });
 }
 
+function footerAnimation(){
+  gsap.from("footer rect,footer path",{
+    y: -220,
+    duration:0.3,
+    stagger:-0.03,
+    scrollTrigger:{
+      trigger: "#bottom",
+      start: "top 80%",
+      end: "bottom 20%",
+      scroller:"main"
+    },
+  })
+}
+
 function init() {
   smoothScroll();
   textHover(".subhead1", ".subt1");
   textHover(".subhead2", ".subt2");
   textHover(".subhead", ".subt3");
   slider();
+  footerAnimation()
   textanimation(".page2-text", "#page2-content", "#page2-head");
   textanimation(".page4-text", "#page4-content", "#page4-head");
   customCursor();
