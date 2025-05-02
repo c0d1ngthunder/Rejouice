@@ -134,8 +134,8 @@ function slider() {
       delay: 0,
       disableOnInteraction: false,
     },
-    speed:4000,
-    effect: "slide"
+    speed: 4000,
+    effect: "slide",
   });
 }
 
@@ -191,10 +191,57 @@ function loadingAnimation() {
   });
 }
 
+function textHover(textelem, subtext) {
+  const text = document.querySelector(textelem);
+  const subtxt = document.querySelector(subtext).offsetWidth + "px";
+  const underline = document.createElement("span");
+  const underline2 = document.createElement("span");
+  let fullWidth = "100%";
+  underline.style.width = subtxt;
 
-smoothScroll();
-slider();
-textanimation(".page2-text", "#page2-content", "#page2-head");
-textanimation(".page4-text", "#page4-content", "#page4-head");
-customCursor();
-loadingAnimation();
+  underline.classList.add("original-underline");
+  underline2.classList.add("animated-underline");
+  text.appendChild(underline);
+  text.appendChild(underline2);
+
+  text.addEventListener("mouseenter", () => {
+    gsap.to(underline, {
+      width: "0%",
+      duration: 0.3,
+      ease: "linear",
+    });
+    gsap.to(underline2, {
+      width: subtxt,
+      duration: 0.3,
+      delay: 0.2,
+      ease: "linear",
+    });
+  });
+  text.addEventListener("mouseleave", () => {
+    gsap.to(underline, {
+      width: subtxt,
+      duration: 0.3,
+      delay: 0.2,
+      ease: "linear",
+    });
+    gsap.to(underline2, {
+      width: "0%",
+      duration: 0.3,
+      ease: "linear",
+    });
+  });
+}
+
+function init() {
+  smoothScroll();
+  textHover(".subhead1", ".subt1");
+  textHover(".subhead2", ".subt2");
+  textHover(".subhead", ".subt3");
+  slider();
+  textanimation(".page2-text", "#page2-content", "#page2-head");
+  textanimation(".page4-text", "#page4-content", "#page4-head");
+  customCursor();
+  loadingAnimation();
+}
+
+init()
